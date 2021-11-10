@@ -5,8 +5,8 @@ function ImageLogin (props) {
   return (
     <Svg
       data-name='Layer 1'
-      width='1em'
-      height='1em'
+      width='100%'
+      height='100%'
       viewBox='0 0 891.295 745.194'
       {...props}
     >
