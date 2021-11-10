@@ -1,9 +1,10 @@
 import React from 'react'
 import { Text, TouchableOpacity, StyleSheet } from 'react-native'
+import { DarkTheme } from '../theme'
 
 const Button = ({ text, onPress, type = 'primary', stylesButton, stylesButtonText }) => {
   const buttonBackgroundColors = {
-    primary: '#00B0FF',
+    primary: DarkTheme.colors.primary,
     light: '#fff'
   }
 

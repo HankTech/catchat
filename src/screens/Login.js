@@ -1,21 +1,23 @@
 import React from 'react'
-import { Text, StatusBar, StyleSheet, View } from 'react-native'
-import { SafeAreaView } from 'react-native-safe-area-context'
+import { Text, StatusBar, View } from 'react-native'
 import ImageLogin from '../assets/images/svg/ImageLogin'
-import { useNavigation } from '@react-navigation/native'
+import { useNavigation, useTheme } from '@react-navigation/native'
+import LoginStyles from '../styles/LoginStyles'
 
 //  components
 import Button from '../components/Button'
 
 const Login = () => {
   const navigation = useNavigation()
-
   const goToRegister = () => navigation.navigate('Register')
 
+  const { colors } = useTheme()
+  const styles = LoginStyles()
+
   return (
-    <SafeAreaView style={styles.container}>
-      <StatusBar backgroundColor='#ffffff' barStyle='dark-content' />
-      <View style={{ width: '100%', height: '40%' }}>
+    <View style={styles.container}>
+      <StatusBar backgroundColor={colors.statusBarBackgroundColor} />
+      <View style={{ width: '100%', height: '40%', marginBottom: 20 }}>
         <ImageLogin />
       </View>
       <Text style={styles.text}>Lleva la privacidad contigo.</Text>
@@ -25,32 +27,8 @@ const Login = () => {
 
       <Button text='Adelante' stylesButton={{ marginBottom: 16 }} onPress={goToRegister} />
       <Button text='Transferir o restaurar cuenta' type='light' stylesButtonText={{ fontSize: 14 }} />
-    </SafeAreaView>
+    </View>
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-
-  text: {
-    fontFamily: 'Inter-Medium',
-    fontSize: 28,
-    color: '#000',
-    textAlign: 'center',
-    width: '85%'
-  },
-
-  termsAndPrivacy: {
-    fontFamily: 'Inter-Regular',
-    fontSize: 16,
-    marginTop: '10%',
-    marginBottom: '5%'
-  }
-})
 
 export default Login

@@ -4,9 +4,9 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 
 const Register = () => {
   return (
-    <View>
-      <Text style={{ margin: 50 }}>Register!!!</Text>
-    </View>
+    <SafeAreaView>
+      <Text style={{ color: '#000' }}>Register!!!</Text>
+    </SafeAreaView>
   )
 }
 
