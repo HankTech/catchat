@@ -17,7 +17,7 @@ const Login = () => {
   return (
     <View style={styles.container}>
       <StatusBar backgroundColor={colors.statusBarBackgroundColor} />
-      <View style={{ width: '100%', height: '40%', marginBottom: 20 }}>
+      <View style={styles.image}>
         <ImageLogin />
       </View>
       <Text style={styles.text}>Lleva la privacidad contigo.</Text>
@@ -25,8 +25,8 @@ const Login = () => {
 
       <Text style={styles.termsAndPrivacy}>Términos de politica y privacidad</Text>
 
-      <Button text='Adelante' stylesButton={{ marginBottom: 16 }} onPress={goToRegister} />
-      <Button text='Transferir o restaurar cuenta' type='light' stylesButtonText={{ fontSize: 14 }} />
+      <Button text='Adelante' stylesButton={styles.buttonNext} onPress={goToRegister} />
+      <Button text='Transferir o restaurar cuenta' type='light' stylesButtonText={styles.restoreButton} />
     </View>
   )
 }

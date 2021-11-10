@@ -1,16 +1,18 @@
 import React from 'react'
 import { Text, TouchableOpacity, StyleSheet } from 'react-native'
-import { DarkTheme } from '../theme'
+import { useTheme } from '@react-navigation/native'
 
 const Button = ({ text, onPress, type = 'primary', stylesButton, stylesButtonText }) => {
+  const { colors } = useTheme()
+
   const buttonBackgroundColors = {
-    primary: DarkTheme.colors.primary,
-    light: '#fff'
+    primary: colors.primary,
+    light: colors.white
   }
 
   const textColor = {
-    primary: '#fff',
-    light: '#0092D4'
+    primary: colors.white,
+    light: colors.gray400
   }
 
   const backgroundColor = buttonBackgroundColors[type]

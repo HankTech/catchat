@@ -9,7 +9,7 @@ export const LightTheme = {
     notification: 'rgb(255, 69, 58)',
     statusBarBackgroundColor: '#fff',
     black: '#000',
-    gray: '#9CA3AF',
+    gray400: '#9CA3AF',
     white: '#fff'
   }
 }

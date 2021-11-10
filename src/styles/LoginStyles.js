@@ -12,6 +12,12 @@ const LoginStyles = () => {
       alignItems: 'center'
     },
 
+    image: {
+      width: '100%',
+      height: '40%',
+      marginBottom: 20
+    },
+
     text: {
       fontFamily: 'Inter-Medium',
       fontSize: 28,
@@ -23,9 +29,17 @@ const LoginStyles = () => {
     termsAndPrivacy: {
       fontFamily: 'Inter-Regular',
       fontSize: 16,
-      color: colors.gray,
+      color: colors.gray400,
       marginTop: '10%',
       marginBottom: '5%'
+    },
+
+    buttonNext: {
+      marginBottom: 16
+    },
+
+    restoreButton: {
+      fontSize: 14
     }
   })
 }
